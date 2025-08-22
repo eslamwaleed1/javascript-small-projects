@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <title>My Counter App</title>
+</head>
+<body>
+    <input placeholder="Enter a title">
+    <button data-action="saveTitle" id="saveTitle">Save Title</button>
+    <p id="title">Counter</p>
+
+    <div id="counter">0</div>
+
+    <div class="buttons">
+        <button data-action="increment">+</button>
+        <button data-action="decrement">-</button>
+        <button data-action="reset">Reset</button>
+        <button data-action="saveCounter">Save Counter</button>
+    </div>
+    
+    <div id="savedCounters"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

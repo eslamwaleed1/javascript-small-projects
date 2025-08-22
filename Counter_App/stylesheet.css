@@ -1,0 +1,123 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden; /* Prevent page scroll bar */
+}
+
+#counter {
+	font-size: 250px;
+	/* font-family:Georgia, 'Times New Roman', Times, serif; */
+}
+
+input[placeholder],
+button#saveTitle,
+#title,
+#counter,
+.buttons,
+#savedCounters {
+    margin-bottom: 14px; /* Small margin between elements */
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
+	width: 70%;
+	margin-bottom: 0; /* Prevent double margin */
+}
+
+input[placeholder] {
+	padding: 10px;
+	font-size: 1.2rem;
+	border: 2px solid #888;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+input[placeholder]:focus {
+	border-color: #007bff;
+}
+
+button {
+	padding: 12px 28px;
+	font-size: 1.3rem;
+	border: none;
+	border-radius: 8px;
+	background: #007bff;
+	color: #fff;
+	cursor: pointer;
+	margin: 0 8px;
+	transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+	background: #0056b3;
+	transform: scale(1.05);
+}
+
+#title {
+	font-size: 2.2rem;
+	font-weight: bold;
+	margin: 18px 0 10px 0;
+	color: #333;
+	letter-spacing: 1px;
+}
+
+.counter-saved-card,
+body > div:not(.buttons):not(#counter):not(#title):not([id]) {
+	background: #f3f3f3;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	margin: 18px 0;
+	padding: 12px 20px;
+	font-size: 1.1rem;
+	color: #222;
+	width: 350px;
+	text-align: left;
+}
+
+#savedCounters {
+	max-height: 250px;
+	overflow-y: auto;
+	width: 370px;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background: #fafafa;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	padding: 8px 0;
+}
+
+/* Optional: Hide scrollbar on Chrome, Edge, Safari */
+#savedCounters::-webkit-scrollbar {
+	width: 8px;
+	background: #eee;
+}
+#savedCounters::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 8px;
+}
+
+/* Optional: Hide scrollbar on Firefox */
+#savedCounters {
+	scrollbar-width: thin;
+	scrollbar-color: #ccc #eee;
+}
+
+@media (max-width: 600px) {
+	#counter {
+		font-size: 120px;
+	}
+	.buttons {
+		width: 100%;
+		flex-direction: column;
+		gap: 10px;
+	}
+	button {
+		width: 100%;
+		margin: 6px 0;
+	}
+}
