@@ -1,4 +1,4 @@
-# Small JavaScript (No Frameworks) Projects
+# Small Vanilla JavaScript Projects
 
 Several small web apps to make me learn and understand building software more. These primary made me understand the ease up frameworks do! It's literally like manual and automatic cars.
 
